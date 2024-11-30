@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=SUSE:wght@100..800&family=Sanchez:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 90px;
+  width: 100%;
+  background: maroon;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .n-logo .logo {
+  font-size: 30px;
+  font-weight: 800;
+  font-style: italic;
+  padding: 7px;
+}
+
+.navbar .n-logo .logo {
+  color: white;
+  background: gainsboro;
+  cursor: pointer;
+  border: 2px solid saddlebrown;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.navbar .n-logo .logo:hover {
+  color: #000;
+}
+
+.navbar .nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .nav-list .nav-item {
+  list-style: none;
+  margin: 10px;
+}
+
+.navbar .nav-list .nav-item .nav-link {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px;
+  cursor: pointer;
+  background: gainsboro;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.navbar .nav-list .nav-item .nav-link:hover {
+  color: black;
+}
+
+.navbar .moon {
+  padding: 7px;
+  background: gainsboro;
+  border: 1px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.navbar .moon:hover {
+  color: white;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+.navbar .icon .menu-btn {
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.navbar #close-btn {
+  padding: 5px;
+  border-radius: 50%;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .nav-list {
+    display: block;
+    position: fixed;
+    background: lightgreen;
+    left: -200px;
+
+    top: 0;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+  }
+
+  body.showme .navbar .nav-list {
+    left: 0;
+  }
+
+  .navbar .nav-list .nav-link {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .navbar .moon {
+    display: none;
+  }
+
+  .navbar .icon {
+    display: block;
+  }
+
+  .navbar .icon .cls-btn {
+    position: absolute;
+    top: 50px;
+    left: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 6;
+  }
+
+  .navbar .icon .menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+}
